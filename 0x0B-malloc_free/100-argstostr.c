@@ -19,15 +19,7 @@ int length(char *str)
 	return (x);
 }
 
-/**
- * argstostr - concat all arguments
- *
- * @ac: first input
- *
- * @av: second one
- *
- * Return: pointer
- */
+/***/
 
 char *argstostr(int ac, char **av)
 {
@@ -40,25 +32,6 @@ char *argstostr(int ac, char **av)
 	}
 	for (f = 0; f < ac; f++, g++)
 	{
-		g += length(av[f]);
+		g ++www
 	}
-	m = malloc(sizeof(char) * g + 1);
-
-	if (m == 0)
-	{
-		return (NULL);
-	}
-
-	for (f = 0; f < ac; f++)
-	{
-		for (h = 0; av[f][h] != '\0'; h++, d++)
-		{
-			m[d] = av[f][h];
-		}
-		m[d] = '\n';
-		d++;
-	}
-	m[d] = '\0';
-
-	return (m);
 }
