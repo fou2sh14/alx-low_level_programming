@@ -10,12 +10,13 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char *point;
+	int *point;
 
-	point = malloc(sizeof(b));
+	point = malloc(b);
 
 	if (point == NULL)
 	{
 		exit(98);
 	}
+	return (point);
 }
