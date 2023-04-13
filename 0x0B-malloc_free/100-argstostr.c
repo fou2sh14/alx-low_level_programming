@@ -19,7 +19,15 @@ int length(char *str)
 	return (x);
 }
 
-/***/
+/**
+ * argstostr - concat all arguments
+ *
+ * @ac: first input
+ *
+ * @av: second one
+ *
+ * Return: pointer
+ */
 
 char *argstostr(int ac, char **av)
 {
