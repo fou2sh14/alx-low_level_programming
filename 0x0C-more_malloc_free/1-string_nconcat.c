@@ -15,7 +15,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int size_one, size_two, g;
+	unsigned int size_one, size_two, g, k;
 	char *point;
 
 	/*check if null*/
@@ -35,15 +35,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (point == NULL)
 		return (NULL);
 
-	for (g = 0; g < (size_one + n); g++)
+	for (g = 0; s1[g] != '\0'; g++)
 	{
-		if (g < size_one)
-			point[g] = s1[g];
-		else if (g >= size_one && g <= size_two)
-			point[g] = s2[g - size_one];
-		else
-			;
+		point[g] = s1[g];
 	}
+
+	for (k = 0; k < n; k++)
+	{
+		point[g] = s2[k];
+		g++;
+	}
+
 	point[g] = '\0';
 	return (point);
 }
