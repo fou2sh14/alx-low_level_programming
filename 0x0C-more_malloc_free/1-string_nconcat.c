@@ -1,25 +1,6 @@
 #include "main.h"
 
 /**
- * length - get length of string
- *
- * @str: the string
- *
- * Return: length
- */
-
-int length(char *str)
-{
-	int f;
-
-	for (f = 0; str[f] != '\0'; f++)
-	{
-		;
-	}
-	return (f);
-}
-
-/**
  * string_nconcat - like nconcat function
  *
  * @s1: first string
@@ -36,39 +17,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int size_one, size_two, g;
 	char *point;
 
-	size_one = length(s1);
-	size_two = length(s2);
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
+
+	for (size_one = 0; s1[size_one] != '\0'; size_one++)
+		;
+	for (size_two = 0; s2[size_two] != '\0'; size_two++)
+		;
 
 	point = malloc(size_one + n + 1);
 
 	if (point == NULL)
-	{
 		return (NULL);
-	}
 
 	for (g = 0; g < (size_one + n); g++)
 	{
 		if (g < size_one)
-		{
 			point[g] = s1[g];
-		}
 		else if (g >= size_one && g <= size_two)
-		{
 			point[g] = s2[g - size_one];
-		}
 		else
-		{
 			;
-		}
 	}
 	point[g] = '\0';
 	return (point);
