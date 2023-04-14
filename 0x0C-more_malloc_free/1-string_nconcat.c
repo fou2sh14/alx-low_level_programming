@@ -41,11 +41,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-		s1 = '\0';
+		s1 = "\0";
 	}
 	if (s2 == NULL)
 	{
-		s2 = '\0';
+		s2 = "\0";
 	}
 
 	point = malloc(size_one + n + 1);
@@ -61,7 +61,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			point[g] = s1[g];
 		}
-		else if (g >= size_one && g < size_two)
+		else if (g >= size_one && g <= size_two)
 		{
 			point[g] = s2[g - size_one];
 		}
