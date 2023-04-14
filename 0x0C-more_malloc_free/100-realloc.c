@@ -39,16 +39,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		}
 		return (m);
 	}
-	if (new_size > old_size)
+	if (new_size > old_size && (ptr != NULL))
 	{
 		m = malloc(new_size);
 
 		/*check if null*/
 		if (m == NULL)
 			return (NULL);
-		for (f = 0; f < old_size && f < new_size; f++)
+		for (f = 0; f < old_size; f++)
 		{
-			*((char *)m + f) = *((char *)ptr + f);
+			m[f] = *((char *)ptr + 1);
 		}
 		free(ptr);
 	}
