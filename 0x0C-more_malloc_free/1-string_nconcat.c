@@ -15,9 +15,8 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int size_one, size_two, g;
+	unsigned int size_one, size_two, g;
 	char *point;
-
 
 	if (s1 == NULL)
 		s1 = "";
@@ -26,6 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (size_one = 0; s1[size_one] != '\0'; size_one++)
 		;
+
 	for (size_two = 0; s2[size_two] != '\0'; size_two++)
 		;
 
