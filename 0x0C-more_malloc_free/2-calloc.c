@@ -22,6 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	point = malloc(size * nmemb);
 
+	/*check if null*/
 	if (point == 0)
 	{
 		return (NULL);
