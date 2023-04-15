@@ -80,7 +80,7 @@ void print_integer(unsigned long int num)
  * Return: 0
  */
 
-int main(int argc, char const *arcv[])
+int main(int argc, char const *argv[])
 {
 	(void)argc;
 
