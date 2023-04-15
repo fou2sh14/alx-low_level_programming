@@ -27,22 +27,22 @@ void _puts_fun(char *string)
  * Return: the int number
  */
 
-int _atoi(const char *string)
+int _atoi(const char *s)
 {
 	int x = 1;
 	unsigned long int r = 0, firstN, g;
 
-	for (firstN = 0; !(string[firstN] >= 48 && string[firstN] <= 57); firstN++)
+	for (firstN = 0; !(s[firstN] >= 48 && s[firstN] <= 57); firstN++)
 	{
-		if (string[firstN] == '-')
+		if (s[firstN] == '-')
 		{
 			x *= -1;
 		}
 	}
-	for (g = firstN; string[g] >= 48 && string[g] <= 57; g++)
+	for (g = firstN; s[g] >= 48 && s[g] <= 57; g++)
 	{
 		r *= 10;
-		r += (string[g] - 48);
+		r += (s[g] - 48);
 	}
 	return (x * r);
 }
@@ -80,7 +80,7 @@ void print_integer(unsigned long int num)
  * Return: 0
  */
 
-int multi(int argc, char const *arcv[])
+int main(int argc, char const *arcv[])
 {
 	(void)argc;
 
