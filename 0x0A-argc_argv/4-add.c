@@ -13,24 +13,19 @@
 
 int main(int argc, char *argv[])
 {
-	int s = 0, f, g;
+	int s = 0;
+	char *point;
 
-	if (argc == 1)
+	while (--argc)
 	{
-		printf("%d\n", 0);
-	}
-	for (g = 0; g < argc; g++)
-	{
-		if (!(atoi(argv[g]) >= 48 && atoi(argv[g]) <= 57))
+		for (point = argv[argc]; *point; point++)
 		{
-			printf("%s\n", "Error");
-			return (1);
+			if (*point < 48 || *point > 57)
+			{
+				return (printf("Error\n"), 1);
+			}
 		}
-	}
-
-	for (f = 1; f < argc; f++)
-	{
-		s += atoi(argv[f]);
+		s += atoi(argv[argc]);
 	}
 	printf("%d\n", s);
 
