@@ -10,17 +10,15 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	int f, sum;
+	int f, sum = 0;
+	va_list lst;
 
 	if (n == 0)
 	{
 		return (0);
 	}
-	va_list lst;
 
 	va_start(lst, n);
-
-	sum = 0;
 
 	for (f = 0; f < n; f++)
 	{
