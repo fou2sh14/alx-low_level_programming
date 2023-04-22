@@ -4,6 +4,20 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * struct input - struct
+ *
+ * @input: first member
+ *
+ * @p: second one
+ */
+
+typedef struct input
+{
+	char *input;
+	void (*p)(char *, va_list);
+} input_t;
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
