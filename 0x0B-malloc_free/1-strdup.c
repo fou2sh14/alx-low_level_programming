@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	}
 	point = malloc(sizeof(*str) * i + 1);
 
-	if (*str == 0 || point == 0)
+	if (str == NULL || point == 0)
 	{
 		return (NULL);
 	}
