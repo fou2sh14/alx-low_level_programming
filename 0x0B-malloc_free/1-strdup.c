@@ -23,10 +23,13 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-
-	for (f = 0; f < i; f++)
+	else
 	{
-		point[f] = str[f];
+
+		for (f = 0; f < i; f++)
+		{
+			point[f] = str[f];
+		}
 	}
 
 	return (point);
