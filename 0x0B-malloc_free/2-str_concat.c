@@ -58,7 +58,7 @@ char *str_concat(char *s1, char *s2)
 		}
 		else
 		{
-			pointf[f] = s2[f - length1];
+			point[f] = s2[f - length1];
 		}
 	}
 
