@@ -32,13 +32,13 @@ int length(char *s)
 char *argstostr(int ac, char **av)
 {
 	char *string;
-	int a, b, c, d;
+	int a = 0, b = 0, c = 0, d = 0;
 
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
-	for (a = 0; a < ac; a++, b++)
+	for (; a < ac; a++, b++)
 	{
 		b += length(av[a]);
 	}
@@ -59,4 +59,3 @@ char *argstostr(int ac, char **av)
 	}
 	string[d] = '\0';
 	return (string);
-}
