@@ -29,6 +29,6 @@ int *array_range(int min, int max)
 	{
 		m[f - min] = f;
 	}
-	m[f] = '\0';
+
 	return (m);
 }
