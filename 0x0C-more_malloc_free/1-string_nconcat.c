@@ -33,7 +33,7 @@ int length(char *s)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int size1, size2, f, g;
+	unsigned int size1, size2, f, g;
 	char *m;
 
 	if (s1 == NULL)
@@ -59,5 +59,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	m[f] = '\0';
 	return (m);
-
 }
