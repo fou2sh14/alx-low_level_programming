@@ -3,25 +3,6 @@
 #include <stdio.h>
 
 /**
- * length - size function
- *
- * @s: string
- *
- * Return: size
- */
-
-int length(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		;
-	}
-	return (i);
-}
-
-/**
  * string_nconcat - like nconcat
  *
  * @s1: string1
@@ -43,8 +24,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	size1 = length(s1);
-	size2 = length(s2);
+	for (size1 = 0; s1[size1] != '\0'; size1++)
+		;
+
+	for (size2 = 0; s2[size2] != '\0'; size2++)
+		;
 
 	m = malloc(size1 + n + 1);
 	/*check if fail*/
