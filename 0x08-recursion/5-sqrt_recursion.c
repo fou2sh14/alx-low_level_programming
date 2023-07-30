@@ -9,15 +9,15 @@
  *
  * Return: int
  */
-int sqrt(int n, int y);
+int _sqrt(int n, int y);
 
 int _sqrt_recursion(int n)
 {
-	return (sqrt(n, 1));
+	return (_sqrt(n, 1));
 }
 
 /**
- * sqrt - get square root function
+ * _sqrt - get square root function
  *
  * @n: number
  *
@@ -26,7 +26,7 @@ int _sqrt_recursion(int n)
  * Return: int
  */
 
-int sqrt(int n, int y)
+int _sqrt(int n, int y)
 {
 	if (y * y == n)
 	{
@@ -34,7 +34,7 @@ int sqrt(int n, int y)
 	}
 	else if (y * y < n)
 	{
-		return (sqrt(n, y + 1));
+		return (_sqrt(n, y + 1));
 	}
 	else
 	{
