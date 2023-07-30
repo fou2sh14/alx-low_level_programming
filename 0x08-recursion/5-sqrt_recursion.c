@@ -1,14 +1,15 @@
 #include "main.h"
 
-int sqrt(int n, int y);
-
 /**
  * _sqrt_recursion - get square root
  *
  * @n: number
  *
+ * @y: counter
+ *
  * Return: int
  */
+int sqrt(int n, int y);
 
 int _sqrt_recursion(int n)
 {
